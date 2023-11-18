@@ -10,7 +10,22 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
 fun myProfile() {
+    val firstName = "Anggi Putri"
+    val lastName = "Meriani"
+    val Alamat = "Kuningan, Jawa Barat"
+    val age = 21
+    val isNotSingle = true
+    val keterangan = "Menti Mobile Development di Infinite Learning"
 
+    println("Nama : $firstName $lastName")
+    println("Alamat : $Alamat")
+    println("Umur : $age tahun")
+    if (isNotSingle) {
+        println("Status = Tidak Single")
+    } else {
+        println("Status = Single")
+    }
+    println("keterangan : $keterangan")
 }
 
 
@@ -19,8 +34,25 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
-    return ""
+    println("Nama Team Marge : $groupId")
+
+    println("Anggota : ")
+    var i = 0
+    for(member in groupMember) {
+        i++
+        println("$i. $member")
+    }
+
+    println("Sesi : $session")
+
+    return """
+        Informasi Team
+        Grup : $groupId
+        Anggota : ${groupMember.size}
+        Sesi : $session
+    """.trimIndent()
 }
+
 
 /**
  * Latihan 3
@@ -29,9 +61,24 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  *
  */
 fun myTeam(): List<Any> {
+    val member = listOf(
+        "Adella Maulana Annur Ramadhan (WEB)",
+        "Ahmad Yusup (MOBILE)",
+        "Alvito Kurnia Fahrio (WEB)",
+        "Anggi Putri Meriani (MOBILE)",
+        "Billy Dwi Prakoso (WEB)",
+        "Dimas Anggoro Harahap (MOBILE)",
+        "Fadhlan Akbarullah (WEB)",
+        "Inayatul maula (MOBILE)",
+        "Muhammad Zaki Raihan (WEB)",
+        "Rafi Kahfi Yugi (WEB)",
+        "Yassar Muwwafaq (MOBILE)")
 
-    return listOf()
+    val myName = member.get(3)
+
+    return listOf(myName)
 }
+
 
 /**
  * Latihan 4
@@ -41,10 +88,21 @@ fun myTeam(): List<Any> {
  *
  */
 fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
+    val mentor = arrayOf<String>("Joy", "Maulana")
+    val countOfGroup = arrayOf<String>(
+        "Adella Maulana Annur Ramadhan (WEB)",
+        "Ahmad Yusup (MOBILE)",
+        "Alvito Kurnia Fahrio (WEB)",
+        "Anggi Putri Meriani (MOBILE)",
+        "Billy Dwi Prakoso (WEB)",
+        "Dimas Anggoro Harahap (MOBILE)",
+        "Fadhlan Akbarullah (WEB)",
+        "Inayatul maula (MOBILE)",
+        "Muhammad Zaki Raihan (WEB)",
+        "Rafi Kahfi Yugi (WEB)",
+        "Yassar Muwwafaq (MOBILE)")
 
-    return 0
+    return mentor.size + countOfGroup.size
 }
 
 fun main() {
@@ -62,6 +120,6 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("", listOf(), "")
+    groupDetail("BingBang & Dinosaur", listOf("Adella Maulana Annur Ramadhan (WEB)", "Ahmad Yusup (MOBILE)", "Alvito Kurnia Fahrio (WEB)","Anggi Putri Meriani (MOBILE)","Billy Dwi Prakoso (WEB)", "Dimas Anggoro Harahap (MOBILE)", "Fadhlan Akbarullah (WEB)", "Inayatul maula (MOBILE)", "Muhammad Zaki Raihan (WEB)", "Rafi Kahfi Yugi (WEB)", "Yassar Muwwafaq (MOBILE)"), "Pagi")
 
 }

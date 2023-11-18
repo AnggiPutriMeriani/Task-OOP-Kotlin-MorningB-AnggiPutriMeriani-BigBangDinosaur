@@ -33,7 +33,35 @@ class Hero {
         println("$name sedang berjalan...")
         health -= 1
     }
+    fun lari() {
+        checkHealth()
+        println("$name sedang berlari...")
+        health -= 2
+    }
 
+    fun makan() {
+        checkHealth()
+        println("$name sedang makan...")
+        health  += 2
+    }
+
+    fun minum() {
+        checkHealth()
+        println("$name sedang minum...")
+        health  += 2
+    }
+
+    fun lompat() {
+        checkHealth()
+        println("$name sedang lompat...")
+        health  -= 2
+    }
+
+    fun duduk() {
+        checkHealth()
+        println("$name sedang duduk...")
+        health  += 1
+    }
 
     /**
      * Buat fungsi untuk lari, makan, minum, lompat, dan duduk. Masing2 memiliki kriteria sebagai berikut:

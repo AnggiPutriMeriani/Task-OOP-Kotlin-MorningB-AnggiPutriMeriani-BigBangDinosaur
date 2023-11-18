@@ -16,5 +16,22 @@ fun main() {
     - Isi variabel result dengan nilai: 'Anda mendapatkan nilai E.'
      */
     // Buat di bawah sini
+    val score = 90
 
+    if (score >= 90) {
+        var result = "Selamat! Anda mendapatkan nilai  A"
+        println(result)
+    } else if (score >= 80) {
+        var result = "Anda mendapatkan nilai B"
+        println(result)
+    } else if (score >= 70) {
+        var result = "Anda mendapatkan nilai C"
+        println(result)
+    } else if (score >= 60) {
+        var result = "Anda mendapatkan nilai D"
+        println(result)
+    } else {
+        var result = "Anda mendapatkan nilai E"
+        println(result)
+    }
 }
